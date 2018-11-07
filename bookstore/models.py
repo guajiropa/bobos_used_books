@@ -1,7 +1,7 @@
 """
 AUTHOR      :   Robert James Patterson
 DATE        :   11/06/2018
-SYNOPSIS    :   Workthru file for 'Mastering Django: Core'
+SYNOPSIS    :   Work thru file for 'Mastering Django: Core'
 """
 
 from django.db import models
