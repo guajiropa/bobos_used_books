@@ -18,7 +18,7 @@ class BookAdmin(admin.ModelAdmin):
     # Set display options for this class
     list_display = ('title', 'publisher', 'publication_date')
     # Create a functional list filter
-    list_filter = ('publication_date')
+    list_filter = ('publication_date',)
 
 admin.site.register(Publisher)
 admin.site.register(Author, AuthorAdmin)
