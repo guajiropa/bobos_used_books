@@ -1,7 +1,7 @@
 """
 AUTHOR      :   Robert James Patterson
-DATE        :   11/03/2018
-SYNOPSIS    :   Work-thru file for Chapter 2 from 'Mastering Django: Core'
+DATE        :   11/10/2018
+SYNOPSIS    :   Work-thru file for 'Mastering Django: Core'
 """
 from datetime import datetime, timedelta
 from django.shortcuts import render
@@ -26,3 +26,13 @@ def hours_ahead(request, offset):
     dt = datetime.now() + timedelta(hours=offset)
     
     return render(request, 'hours_ahead.html', {'hours_offset': offset, 'next_time': dt})
+
+
+def display_meta(request):
+    values = request.META.items()
+    #values.sort()
+    html = []
+    for k, v in values:
+        html.append('<tr><td>%s</td><td>%s</td></tr>' % (k, v))
+    return HttpResponse('<table>%s</table>' % '\n'.join(html))
+    
