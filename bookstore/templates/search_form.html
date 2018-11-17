@@ -7,7 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">    
 </head>
 <body>
-    <form action="/search/" method="GET">
+    {% if errors %}
+        <ul>
+            {% for error in errors %}
+                <li style="color: red; font-weight: 800">{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <form action="/search/" method="get">
         <input type="text" name="q" />
         <input type="submit" value="Search" />
     </form>

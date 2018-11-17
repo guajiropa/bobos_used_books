@@ -1,4 +1,4 @@
 {
-    "python.pythonPath": "C:\\Users\\guaji\\source\\repos\\Python\\mastering_django_core\\bobos_used_books\\env\\Scripts\\python.exe",
+    "python.pythonPath": "env\\Scripts\\python.exe",
     "python.linting.pylintEnabled": true
 }
