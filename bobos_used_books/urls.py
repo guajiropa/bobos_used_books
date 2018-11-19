@@ -5,7 +5,8 @@ SYNOPSIS    :   Workthru file for 'Mastering Django: Core'
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from bobos_used_books.views import index, hello, current_datetime, hours_ahead, display_meta
+from .views import index, hello, current_datetime, hours_ahead, \
+                            contact, display_meta
 from bookstore import views
 
 urlpatterns = [
@@ -17,5 +18,5 @@ urlpatterns = [
     url(r'^display-meta/$', display_meta),
     url(r'^search-form/$', views.search_form),
     url(r'^search/$', views.search),
-    
+    url(r'^contact/$', contact),
 ]

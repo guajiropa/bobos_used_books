@@ -5,7 +5,8 @@ SYNOPSIS    :   Work-thru file for 'Mastering Django: Core'.
 """
 
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
+from django.core.mail import send_mail
 from bookstore.models import Book
 
 
@@ -27,3 +28,4 @@ def search(request):
             books = Book.objects.filter(title__icontains=q)
             return render(request, 'search_results.html', {'books': books, 'query': q})
         return render (request, 'search_form.html', {'errors': errors})
+
