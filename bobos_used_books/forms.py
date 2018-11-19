@@ -12,11 +12,10 @@ class ContactForm(forms.Form):
     message = forms.CharField(widget=forms.Textarea)
 
     def clean_message(self):
-        message = self.clean_data['message']
+        message = self.cleaned_data['message']
         num_words = len(message.split( ))
 
         if num_words < 4:
             raise forms.ValidationError("Message must contain at lest four words!")
 
         return message
-        
