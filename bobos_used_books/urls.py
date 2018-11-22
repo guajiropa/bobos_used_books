@@ -5,8 +5,7 @@ SYNOPSIS    :   Workthru file for 'Mastering Django: Core'
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from .views import index, hello, current_datetime, hours_ahead, \
-                            contact, display_meta
+from .views import hello, index, current_datetime, hours_ahead, display_meta, contact
 from bookstore import views
 
 urlpatterns = [
